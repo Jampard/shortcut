@@ -5,9 +5,10 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
+<Layout title="Short/cut">
+	<main class="flex-col">
 		<Header/>
+		<div class="h-[7rem]"></div>
 		<Hero/>
 		<!-- <svg -->
 		<!-- 	class="astro-a" -->
@@ -67,6 +68,8 @@ import Hero from '../components/Hero.astro';
 	</main>
 </Layout>
 
+<style>
+</style>
 <!-- <style> -->
 <!-- 	main { -->
 <!-- 		margin: auto; -->
