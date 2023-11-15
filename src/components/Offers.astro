@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon'
+
 interface Props {
 	price: string;
 	body: string[];
@@ -18,22 +20,31 @@ const { href, price, body } = Astro.props;
 <div class=" absolute right-1/4 w-1/4 h-px bg-gradient-to-r from-rose-400/50 from-1% "></div>
 <div class="absolute left-1/4 w-1/4 h-px bg-gradient-to-l from-rose-400/50 from-1% "></div>
   </div>
-  <div class="card-body items-center text-center">
+  <div class="card-body items-start text-center p-5">
     <!-- <h2 class="card-title">Shoes!</h2> -->
     <p>What is included</p>
-    <ul class="text-left">
+    <ul class="text-left flex flex-col gap-y-4 p-y-3">
       {body.map((item) => (
-        <li class="space-x-2">
-      <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" checked onclick="
-      return false;
-      ">
+        <li class="flex gap-3 justify-start content-center">
+      <span class="self-center">
+        <Icon name="bi:check-square-fill"  width="24" height="24"/>
+      </span>
       <span>
-      {item}</span></li>
+        {item}
+      </span>
+      </li>
       ))}
     </ul>
-    <div class="card-actions flex-col">
+    <div class="card-actions flex-col self-center items-center">
       <a href={href}><button class="btn btn-primary" >Buy Now</button></a>
       <button class="btn btn-primary">Book a call</button>
     </div>
   </div>
 </div>
+<!-- <style lang="css"> -->
+<!--     [astro-icon] { -->
+<!--         color: blue; -->
+<!--         /* OR */ -->
+<!--         fill: blue; -->
+<!--     } -->
+<!-- </style> -->
