@@ -1,0 +1,39 @@
+---
+interface Props {
+	price: string;
+	body: string[];
+	href: string;
+	call: string;
+}
+
+const { href, price, body } = Astro.props;
+---
+
+<div class="card w-80 bg-base-100 shadow-xl border border-base-content rounded-2xl p-1">
+  <figure class="px-10 pt-10 space-x-2">
+<h2 class="text-5xl font-bold">{price}$  </h2><p> / month</p>
+  </figure>
+  <div>
+		<div class="h-[1rem]"></div>
+<div class=" absolute right-1/4 w-1/4 h-px bg-gradient-to-r from-rose-400/50 from-1% "></div>
+<div class="absolute left-1/4 w-1/4 h-px bg-gradient-to-l from-rose-400/50 from-1% "></div>
+  </div>
+  <div class="card-body items-center text-center">
+    <!-- <h2 class="card-title">Shoes!</h2> -->
+    <p>What is included</p>
+    <ul class="text-left">
+      {body.map((item) => (
+        <li class="space-x-2">
+      <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" checked onclick="
+      return false;
+      ">
+      <span>
+      {item}</span></li>
+      ))}
+    </ul>
+    <div class="card-actions flex-col">
+      <a href={href}><button class="btn btn-primary" >Buy Now</button></a>
+      <button class="btn btn-primary">Book a call</button>
+    </div>
+  </div>
+</div>

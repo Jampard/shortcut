@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import Offers from '../components/Offers.astro';
 ---
 
 <Layout title="Short/cut">
@@ -10,6 +11,15 @@ import Hero from '../components/Hero.astro';
 		<Header/>
 		<div class="h-[7rem]"></div>
 		<Hero/>
+		<div class="h-[7rem]"></div>
+		<div class="flex w-full justify-center">
+		<Offers
+		price="100"
+			body={["un", "deux"]}
+			href="https://astro.build/chat/"
+		call='Contactez-nous'
+		/>
+			</div>
 		<!-- <svg -->
 		<!-- 	class="astro-a" -->
 		<!-- 	width="495" -->
