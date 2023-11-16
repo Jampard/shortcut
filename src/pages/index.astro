@@ -14,11 +14,11 @@ import Services from '../components/Services.astro';
 		<Hero/>
 		<div class="h-[7rem]"></div>
 		<div class="flex w-full justify-center">
-		<Services
-		services={["Test1,Test2"]}
-			title="test"
-			icon="Test"
-			description="Description"
+		<Services		
+		services={[{icon:"random-icon-1", title: "Short on request",description: "Delivering High quality short curated to your target audience within a few business days."},
+		{icon:"random-icon-1", title: "We create stories",description: "Producing engaging content through story telling shorts that hook viewers retention."},
+		{icon:"random-icon-1", title: "Personalised visual identity",description: "Foster brand recognition by adopting a unique visual identity for all your short content"}
+	]};
 		/>
 		<Offers
 		price="100"
