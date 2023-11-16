@@ -5,6 +5,8 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Offers from '../components/Offers.astro';
 import Services from '../components/Services.astro';
+import Portfolio from '../components/Portfolio.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Short/cut">
@@ -12,14 +14,14 @@ import Services from '../components/Services.astro';
 		<Header/>
 		<div class="h-[7rem]"></div>
 		<Hero/>
-		<div class="h-[7rem]"></div>
-		<div class="flex w-full justify-center">
 		<Services		
 		services={[{icon:"heroicons:bolt-20-solid", title: "Short on request",description: "Delivering High quality short curated to your target audience within a few business days."},
 		{icon:"heroicons:book-open-solid", title: "We create stories",description: "Producing engaging content through story telling shorts that hook viewers retention."},
-		{icon:"heroicons:paint-brush-solid", title: "Personalised visual identity",description: "Foster brand recognition by adopting a unique visual identity for all your short content"}
-	]};
+		{icon:"heroicons:paint-brush-solid", title: "Personalised visual identity",description: "Foster brand recognition by adopting a unique visual identity for all your short content"}]}; 
 		/>
+		<Portfolio/>
+		<div class="h-[7rem]"></div>
+		<div class="flex w-full justify-center">
 		<Offers
 		price="100"
 			body={["15 high quality shorts requests", "Creation of a personalised visual identity adapted to your brand and applied to all delivered short content"]}
@@ -27,6 +29,8 @@ import Services from '../components/Services.astro';
 		call='Contactez-nous'
 		/>
 			</div>
+		<Footer/>
+
 		<!-- <svg -->
 		<!-- 	class="astro-a" -->
 		<!-- 	width="495" -->
@@ -84,7 +88,6 @@ import Services from '../components/Services.astro';
 		<!-- </ul> -->
 	</main>
 </Layout>
-
 <style>
 </style>
 <!-- <style> -->
