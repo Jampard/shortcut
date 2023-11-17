@@ -36,7 +36,11 @@ const { href, price, body } = Astro.props;
       ))}
     </ul>
     <div class="card-actions flex-col self-center items-center">
-      <a href={href}><button class="btn btn-accent rounded-full" >Start Now</button></a>
+      <!-- <a href={href}><button class="btn btn-accent rounded-full" >Start Now</button></a> -->
+<stripe-buy-button
+  buy-button-id="buy_btn_1ODOpPASvNKVhcaGePzTrUvX"
+  publishable-key="pk_test_51ODOLeASvNKVhcaGmpNUhY0bG9hIdGnTYouuGoHcBcRM6FwTjkd5gN6gJY5KBC9FJ9O5Yn6yrqrFCrJpUyO1zmr2000BZrUhO9"
+/>
       <button class="btn btn-outline btn-primary rounded-full">Book a call</button>
     </div>
   </div>
