@@ -1,42 +1,22 @@
 ---
-import { Icon } from 'astro-icon'
-
-// interface Service {
-//   services: string[];
-//   icon: string[];
-//   title: string[];
-//   description: string[];
-// }
-
-const { services } = Astro.props;
+import ServiceCard from './ServiceCard.astro'
 ---
 
-<section>
-    <h2 class="text-3xl text-center pb-2">Short/cut is your best way to maximise your content potential</h2>
-    <p class="text-center">Let’s make your voice be heard the right way.</p>
-    <ul class="flex flex-row items-top">
-        {services.map((service) => (
-          <li class="flex flex-col justify-center p-8 space-y-6">
-            <span class="self-center">
-              <Icon name={service.icon} width="72" height="72"/>
-            </span>
-            <h3 class="text-4xl text-center font-bold py-4">{service.title}</h3>
-            <p class="text-center">{service.description}</p>
-          </li>
-        ))}
-    </ul>
-</section>
-
-<!-- <div class="container flex">
-    <ul class="flex flex-row">
-        {services.map((icon,title,description) => (
-          <li class="flex flex-col justify-center p-8 space-y-6">
-            <span class="self-center">
-            <Icon name={icon}  width="72" height="72"/>
-            </span>
-            <h3 class="text-4xl text-center	font-bold py-4">{title}</h3>
-            <p class="text-center">{description}</p>
-        </li>
-        ))}
-      </ul>
-</div> -->
+<div class="flex flex-col gap-2">
+  <h2 class="font-bold text-3xl text-center pb-2">Short/cut is your best way to maximise your content potential</h2>
+  <p class="text-center">Let’s make your voice be heard the right way.</p>
+  <div class="flex gap-3 p-10 justify-center">
+    <ServiceCard icon="bi:check-square-fill"
+      title= "Short on request"
+      description ="Delivering High quality short curated to your target audience within a few business days"/>
+    <ServiceCard icon="bi:check-square-fill"
+      title= "We create stories"
+      description ="Producing engaging content through story telling shorts that hook viewers retention"/>
+    <ServiceCard icon="bi:check-square-fill"
+      title= "Personalised visual identity"
+      description ="Foster brand recognition by adopting a unique visual identity for all your short content"/>
+  </div>
+</div>
+<!-- icon:"heroicons:bolt-20-solid" -->
+<!-- icon:"heroicons:paint-brush-solid" -->
+<!-- icon:"heroicons:paint-brush-solid" -->
