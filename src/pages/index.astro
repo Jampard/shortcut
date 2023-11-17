@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
-import Offers from '../components/Offers.astro';
+import Offer from '../components/Offer.astro';
 import Services from '../components/Services.astro';
 import Portfolio from '../components/Portfolio.astro';
 import Footer from '../components/Footer.astro';
@@ -12,24 +12,11 @@ import Footer from '../components/Footer.astro';
 <Layout title="Short/cut">
 	<main class="flex-col">
 		<Header/>
-		<div class="h-[7rem]"></div>
 		<Hero/>
-		<div class="h-[4rem]"></div>
+		<!-- <div class="h-[4rem]"></div> -->
 		<Services/>
 		<Portfolio/>
-		<div class="h-[7rem]"></div>
-		<div class="flex w-full justify-center">
-		<Offers
-		price="100"
-			body={["15 high quality shorts requests", 
-				"Creation of a personalised visual identity adapted to your brand and applied to all delivered short content",
-				"Delivering strong story telling from all short extracted from your existing content",
-				"Publication in all major social platforms at carefully chosen times"
-				]}
-			href="https://astro.build/chat/"
-		call='Contactez-nous'
-		/>
-			</div>
+		<Offer/>
 		<Footer/>
 
 		<!-- <svg -->
