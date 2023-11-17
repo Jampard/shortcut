@@ -11,14 +11,14 @@ interface Props {
 const { href, price, body } = Astro.props;
 ---
 
-<div class="card w-80 bg-base-100 shadow-xl border border-base-content rounded-2xl p-1">
+<div class="card w-80 bg-black/10 shadow-xl border border-base-content rounded-2xl p-1">
   <figure class="px-10 pt-10 space-x-2">
 <h2 class="text-5xl font-bold">{price}$  </h2><p> / month</p>
   </figure>
   <div>
 		<div class="h-[1rem]"></div>
-<div class=" absolute right-1/4 w-1/4 h-px bg-gradient-to-r from-rose-400/50 from-1% "></div>
-<div class="absolute left-1/4 w-1/4 h-px bg-gradient-to-l from-rose-400/50 from-1% "></div>
+<div class=" absolute right-1/4 w-1/4 h-px bg-gradient-to-r from-accent/50 from-1% "></div>
+<div class="absolute left-1/4 w-1/4 h-px bg-gradient-to-l from-accent/50 from-1% "></div>
   </div>
   <div class="card-body items-start text-center p-5">
     <!-- <h2 class="card-title">Shoes!</h2> -->
@@ -36,8 +36,8 @@ const { href, price, body } = Astro.props;
       ))}
     </ul>
     <div class="card-actions flex-col self-center items-center">
-      <a href={href}><button class="btn btn-primary" >Buy Now</button></a>
-      <button class="btn btn-primary">Book a call</button>
+      <a href={href}><button class="btn btn-accent rounded-full" >Start Now</button></a>
+      <button class="btn btn-outline btn-primary rounded-full">Book a call</button>
     </div>
   </div>
 </div>
