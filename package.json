@@ -1,23 +1,26 @@
 {
-  "name": "shortcut",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.3.1",
-    "@astrojs/tailwind": "^5.0.2",
-    "astro": "^3.5.0",
-    "astro-icon": "^0.8.1",
-    "tailwindcss": "^3.0.24",
-    "typescript": "^5.2.2"
-  },
-  "devDependencies": {
-    "daisyui": "^3.9.4"
-  }
+	"name": "shortcut",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.3.1",
+		"@astrojs/tailwind": "^5.0.2",
+		"astro": "^3.5.0",
+		"astro-icon": "^0.8.1",
+		"tailwindcss": "^3.0.24",
+		"typescript": "^5.2.2"
+	},
+	"devDependencies": {
+		"daisyui": "^3.9.4",
+		"prettier": "^3.1.0",
+		"prettier-plugin-astro": "^0.12.2",
+		"prettier-plugin-tailwindcss": "^0.5.7"
+	}
 }

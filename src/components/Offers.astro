@@ -2,48 +2,48 @@
 import { Icon } from 'astro-icon'
 
 interface Props {
-	price: string;
-	body: string[];
-	href: string;
-	call: string;
+	price: string
+	body: string[]
+	href: string
+	call: string
 }
 
-const { href, price, body } = Astro.props;
+const { href, price, body } = Astro.props
 ---
 
-<div class="card w-96 bg-black/40 shadow-xl border border-base-content rounded-2xl p-1">
-  <figure class="px-10 pt-10 space-x-2">
-<h2 class="text-6xl font-bold">{price}$  </h2><p> / month</p>
-  </figure>
-  <div>
+<div class="card w-96 rounded-2xl border border-base-content bg-black/40 p-1 shadow-xl">
+	<figure class="space-x-2 px-10 pt-10">
+		<h2 class="text-6xl font-bold">{price}$</h2><p>/ month</p>
+	</figure>
+	<div>
 		<div class="h-[1rem]"></div>
-<div class=" absolute right-1/4 w-1/4 h-px bg-gradient-to-r from-accent/50 from-1% "></div>
-<div class="absolute left-1/4 w-1/4 h-px bg-gradient-to-l from-accent/50 from-1% "></div>
-  </div>
-  <div class="card-body gap-4 items-start text-center p-5">
-    <!-- <h2 class="card-title">Shoes!</h2> -->
-    <p>What is included</p>
-    <ul class="text-left flex flex-col gap-y-4 p-y-3">
-      {body.map((item) => (
-        <li class="flex gap-3 justify-start content-center">
-      <span class="self-center">
-        <Icon name="bi:check-square-fill"  width="24" height="24"/>
-      </span>
-      <span>
-        {item}
-      </span>
-      </li>
-      ))}
-    </ul>
-    <div class="card-actions flex-col self-center items-center">
-      <!-- <a href={href}><button class="btn btn-accent rounded-full" >Start Now</button></a> -->
-<stripe-buy-button
-  buy-button-id="buy_btn_1ODOpPASvNKVhcaGePzTrUvX"
-  publishable-key="pk_test_51ODOLeASvNKVhcaGmpNUhY0bG9hIdGnTYouuGoHcBcRM6FwTjkd5gN6gJY5KBC9FJ9O5Yn6yrqrFCrJpUyO1zmr2000BZrUhO9"
-/>
-      <button class="btn btn-outline rounded-full normal-case ">Book a call</button>
-    </div>
-  </div>
+		<div class="from-1% absolute right-1/4 h-px w-1/4 bg-gradient-to-r from-accent/50"></div>
+		<div class="from-1% absolute left-1/4 h-px w-1/4 bg-gradient-to-l from-accent/50"></div>
+	</div>
+	<div class="card-body items-start gap-4 p-5 text-center">
+		<!-- <h2 class="card-title">Shoes!</h2> -->
+		<p>What is included</p>
+		<ul class="p-y-3 flex flex-col gap-y-4 text-left">
+			{
+				body.map((item) => (
+					<li class="flex content-center justify-start gap-3">
+						<span class="self-center">
+							<Icon name="bi:check-square-fill" width="24" height="24" />
+						</span>
+						<span>{item}</span>
+					</li>
+				))
+			}
+		</ul>
+		<div class="card-actions flex-col items-center self-center">
+			<!-- <a href={href}><button class="btn btn-accent rounded-full" >Start Now</button></a> -->
+			<stripe-buy-button
+				buy-button-id="buy_btn_1ODOpPASvNKVhcaGePzTrUvX"
+				publishable-key="pk_test_51ODOLeASvNKVhcaGmpNUhY0bG9hIdGnTYouuGoHcBcRM6FwTjkd5gN6gJY5KBC9FJ9O5Yn6yrqrFCrJpUyO1zmr2000BZrUhO9"
+			></stripe-buy-button>
+			<button class="btn btn-outline rounded-full normal-case">Book a call</button>
+		</div>
+	</div>
 </div>
 <!-- <style lang="css"> -->
 <!--     [astro-icon] { -->

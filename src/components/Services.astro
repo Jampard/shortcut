@@ -2,21 +2,28 @@
 import ServiceCard from './ServiceCard.astro'
 ---
 
-<div id="services" class="pt-2 md:px-20 md:pt-6 flex flex-col gap-2">
-  <h2 class="font-bold text-6xl text-center pb-2 whitespace-pre-line">Use Short/cut to maximise
-     your content potential</h2>
-  <p class="text-center mb-10">Let’s make your voice be heard the right way.</p>
-  <div class="flex gap-3 p-10 mb-10 justify-center">
-    <ServiceCard icon="bolt"
-      title= "Short on request"
-      description ="Delivering High quality short curated to your target audience within a few business days"/>
-    <ServiceCard icon="book"
-      title= "We create stories"
-      description ="Producing engaging content through story telling shorts that hook viewers retention"/>
-    <ServiceCard icon="brush"
-      title= "Personalised visual identity"
-      description ="Foster brand recognition by adopting a unique visual identity for all your short content"/>
-  </div>
+<div id="services" class="flex flex-col gap-2 pt-2 md:px-20 md:pt-6">
+	<h2 class="whitespace-pre-line pb-2 text-center text-6xl font-bold">
+		Use Short/cut to maximise your content potential
+	</h2>
+	<p class="mb-10 text-center">Let’s make your voice be heard the right way.</p>
+	<div class="mb-10 flex justify-center gap-3 p-10">
+		<ServiceCard
+			icon="bolt"
+			title="Short on request"
+			description="Delivering High quality short curated to your target audience within a few business days"
+		/>
+		<ServiceCard
+			icon="book"
+			title="We create stories"
+			description="Producing engaging content through story telling shorts that hook viewers retention"
+		/>
+		<ServiceCard
+			icon="brush"
+			title="Personalised visual identity"
+			description="Foster brand recognition by adopting a unique visual identity for all your short content"
+		/>
+	</div>
 </div>
 <!-- icon:"heroicons:bolt-20-solid" -->
 <!-- icon:"heroicons:paint-brush-solid" -->
