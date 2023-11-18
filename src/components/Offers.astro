@@ -37,6 +37,7 @@ const { href, price, body } = Astro.props
 		</ul>
 		<div class="card-actions flex-col items-center self-center">
 			<!-- <a href={href}><button class="btn btn-accent rounded-full" >Start Now</button></a> -->
+			<script async src="https://js.stripe.com/v3/buy-button.js"></script>
 			<stripe-buy-button
 				buy-button-id="buy_btn_1ODOpPASvNKVhcaGePzTrUvX"
 				publishable-key="pk_test_51ODOLeASvNKVhcaGmpNUhY0bG9hIdGnTYouuGoHcBcRM6FwTjkd5gN6gJY5KBC9FJ9O5Yn6yrqrFCrJpUyO1zmr2000BZrUhO9"
