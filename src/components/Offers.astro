@@ -37,11 +37,48 @@ const { href, price, body } = Astro.props
 		</ul>
 		<div class="card-actions flex-col items-center self-center">
 			<!-- <a href={href}><button class="btn btn-accent rounded-full" >Start Now</button></a> -->
-			<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+			<button id="buyButton" class="btn btn-accent rounded-full">Start Now</button>
+
+			<!-- HTML for the Buy button -->
+			<!-- <button id="buyButton">Buy</button> -->
+
+			<!-- HTML for the Stripe "Buy" button (initially hidden) -->
 			<stripe-buy-button
+				id="stripeBuyButton"
 				buy-button-id="buy_btn_1ODOpPASvNKVhcaGePzTrUvX"
 				publishable-key="pk_test_51ODOLeASvNKVhcaGmpNUhY0bG9hIdGnTYouuGoHcBcRM6FwTjkd5gN6gJY5KBC9FJ9O5Yn6yrqrFCrJpUyO1zmr2000BZrUhO9"
-			></stripe-buy-button>
+				style="display: none;"></stripe-buy-button>
+
+			<!-- JavaScript to load Stripe script when Buy button is clicked -->
+			<script>
+				// Get references to the buttons and Stripe script
+				const buyButton = document.getElementById('buyButton')
+				const stripeBuyButton = document.getElementById('stripeBuyButton')
+
+				// Function to load Stripe script
+				function loadStripeScript() {
+					// Check if the Stripe script is already loaded
+					if (typeof Stripe === 'undefined') {
+						// Create a script element to load the Stripe script
+						const stripeScript = document.createElement('script')
+						stripeScript.src = 'https://js.stripe.com/v3/buy-button.js'
+						stripeScript.async = true
+
+						// Add an event listener to detect when the Stripe script has loaded
+						stripeScript.addEventListener('load', () => {
+							// Once the Stripe script is loaded, display the Stripe "Buy" button
+							stripeBuyButton.style.display = 'block'
+							buyButton.style.display = 'none'
+						})
+
+						// Append the script element to the document's head
+						document.head.appendChild(stripeScript)
+					}
+				}
+
+				// Attach a click event listener to the Buy button
+				buyButton.addEventListener('click', loadStripeScript)
+			</script>
 			<button class="btn btn-outline rounded-full normal-case">Book a call</button>
 		</div>
 	</div>
