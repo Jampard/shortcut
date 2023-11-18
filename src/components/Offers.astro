@@ -51,14 +51,14 @@ const { href, price, body } = Astro.props
 
 			<!-- JavaScript to load Stripe script when Buy button is clicked -->
 			<script>
-				// Get references to the buttons and Stripe script
-				const buyButton = document.getElementById('buyButton')
-				const stripeBuyButton = document.getElementById('stripeBuyButton')
+				document.addEventListener('DOMContentLoaded', function () {
+					// Get references to the buttons and Stripe script
+					const buyButton = document.getElementById('buyButton')!
+					const stripeBuyButton = document.getElementById('stripeBuyButton')!
 
-				// Function to load Stripe script
-				function loadStripeScript() {
-					// Check if the Stripe script is already loaded
-					if (typeof Stripe === 'undefined') {
+					// Function to load Stripe script
+					function loadStripeScript() {
+						// Check if the Stripe script is already loaded
 						// Create a script element to load the Stripe script
 						const stripeScript = document.createElement('script')
 						stripeScript.src = 'https://js.stripe.com/v3/buy-button.js'
@@ -74,10 +74,10 @@ const { href, price, body } = Astro.props
 						// Append the script element to the document's head
 						document.head.appendChild(stripeScript)
 					}
-				}
 
-				// Attach a click event listener to the Buy button
-				buyButton.addEventListener('click', loadStripeScript)
+					// Attach a click event listener to the Buy button
+					buyButton.addEventListener('click', loadStripeScript)
+				})
 			</script>
 			<button class="btn btn-outline rounded-full normal-case">Book a call</button>
 		</div>
