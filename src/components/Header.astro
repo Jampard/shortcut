@@ -1,38 +1,47 @@
-<div
-	id="home"
-	class="navbar flex-col justify-between gap-4 px-8 pt-2 sm:flex-row md:px-12 md:pt-6 lg:px-24"
->
-	<a href="https://shortcut-7ec.pages.dev/" class="btn btn-ghost text-4xl normal-case"
-		>Short/cut
-		<span class="h-3.5 w-3.5 translate-y-2 rounded-full bg-red-500"></span>
-	</a>
-	<ul
-		class="menu menu-horizontal justify-around rounded-3xl border border-base-content p-0.5 text-2xl sm:gap-1 lg:gap-4"
-	>
-		<li>
-			<a class="pl-0.5 pr-0.5 sm:pl-1 sm:pr-1" href="#home">
-				<button class="btn btn-outline rounded-full border-transparent p-3 normal-case">Home</button
-				></a
-			>
-		</li>
-		<li>
-			<a class="pl-0.5 pr-0.5" href="#services">
-				<button class="btn btn-outline rounded-full border-transparent normal-case">Services</button
-				>
-			</a>
-		</li>
-		<li>
-			<a class="pl-0.5 pr-0.5" href="#portfolio">
-				<button class="btn btn-outline rounded-full border-transparent normal-case"
-					>Portfolio</button
-				>
-			</a>
-		</li>
-		<li>
-			<a class="pl-0.5 pr-0.5" href="#pricing">
-				<button class="btn btn-outline rounded-full border-transparent normal-case">Pricing</button>
-			</a>
-		</li>
-	</ul>
-	<button class="btn btn-outline rounded-full normal-case">Book a call</button>
+<div class="drawer">
+	<input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+	<div class="drawer-content flex flex-col">
+		<!-- Navbar -->
+		<div class="navbar w-full">
+			<div class="flex-none lg:hidden">
+				<label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						class="inline-block h-6 w-6 stroke-current"
+						><path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 6h16M4 12h16M4 18h16"></path></svg
+					>
+				</label>
+			</div>
+			<div class="mx-2 flex-1 px-2">
+				<a href="https://www.shortcut-production.com/" class="text-4xl normal-case inline-flex"
+					>Short/cut
+					<img src="/favicon.svg" class="w-5 translate-y-2"/>
+				</a>
+			</div>
+			<div class="hidden flex-none lg:block">
+				<ul class="menu menu-horizontal">
+					<!-- Navbar menu content here -->
+					<li><a href="#services">Services</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#pricing">Pricing</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Page content here -->
+	</div>
+	<div class="drawer-side">
+		<label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
+		<ul class="menu min-h-full w-40 bg-base-200 text-xl p-4">
+			<!-- Sidebar content here -->
+					<li><a href="#services">Services</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#pricing">Pricing</a></li>
+		</ul>
+	</div>
 </div>
