@@ -1,6 +1,37 @@
 ---
 import '@fontsource-variable/space-grotesk'
 
+import { SEO } from 'astro-seo'
+import type { Props as seoProps } from 'astro-seo'
+const seoData: seoProps = {
+	title: 'Shortcut Production - Transform Your Content into Engaging Videos',
+	description:
+		'Shortcut Production specializes in creating short, captivating videos from existing content for social media platforms.',
+	canonical: 'https://shortcut-production.com',
+	openGraph: {
+		basic: {
+			title: 'Shortcut Production - Engaging Social Media Videos',
+			type: 'website',
+			image: 'https://shortcut-production.com/og-image.jpg'
+		},
+		optional: {
+			description:
+				'Create compelling short videos for social media from your existing content with Shortcut Production.',
+			siteName: 'Shortcut Production'
+		}
+	},
+	twitter: {
+		card: 'summary_large_image',
+		site: '@shortcut_pr',
+		creator: '@shortcut_prd',
+		title: 'Shortcut Production - Short Social Media Videos',
+		image: 'https://shortcut-production.com/twitter-image.jpg',
+		description:
+			'Turn your content into short, engaging videos for social media with Shortcut Production.'
+	}
+	// Additional properties or customizations as needed
+}
+
 interface Props {
 	title: string
 }
@@ -16,14 +47,15 @@ const { title } = Astro.props
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<SEO {...seoData} />
 		<title>{title}</title>
 	</head>
 	<body class="text-white">
 		<slot />
+		<style is:global>
+			body {
+				font-family: 'Space Grotesk Variable', sans-serif;
+			}
+		</style>
 	</body>
 </html>
-<style is:global>
-	body {
-		font-family: 'Space Grotesk Variable', sans-serif;
-	}
-</style>
