@@ -11,7 +11,9 @@ interface Props {
 const { href, price, body } = Astro.props
 ---
 
-<div class="card w-96 rounded-2xl border border-base-content bg-black/40 p-1 shadow-xl">
+<div
+	class="card w-96 rounded-2xl border border-base-content bg-black/40 p-1 shadow-xl hover:bg-black/10"
+>
 	<figure class="space-x-2 px-10 pt-10">
 		<h2 class="text-6xl font-bold">{price}$</h2><p>/ month</p>
 	</figure>
